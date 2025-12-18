@@ -29,7 +29,7 @@ function BookingPage() {
 // Fetch availability whenever date or time slot changes
 useEffect(() => {
   if (selectedDate && selectedTimeSlot) {
-    axios.get(`http://localhost:5000/api/availability`, {
+    axios.get(`https://badminton-court-booking-system-hr06.onrender.com/api/availability`, {
       params: { date: selectedDate, time_slot: selectedTimeSlot }
     }).then(res => setAvailability(res.data))
       .catch(err => console.log(err));
@@ -42,7 +42,7 @@ useEffect(() => {
 useEffect(() => {
   if (selectedDate) {
     axios
-      .get(`http://localhost:5000/api/bookings/date/${selectedDate}`)
+      .get(`https://badminton-court-booking-system-hr06.onrender.com/api/bookings/date/${selectedDate}`)
       .then((res) => setBookedSlots(res.data))
       .catch((err) => console.log(err));
   } else {
@@ -54,9 +54,9 @@ useEffect(() => {
   // Fetch data from backend
   // -----------------------------
   useEffect(() => {
-    axios.get("http://localhost:5000/api/courts").then(res => setCourts(res.data));
-    axios.get("http://localhost:5000/api/equipment").then(res => setEquipment(res.data));
-    axios.get("http://localhost:5000/api/coaches").then(res => setCoaches(res.data));
+    axios.get("https://badminton-court-booking-system-hr06.onrender.com/api/courts").then(res => setCourts(res.data));
+    axios.get("https://badminton-court-booking-system-hr06.onrender.com/api/equipment").then(res => setEquipment(res.data));
+    axios.get("https://badminton-court-booking-system-hr06.onrender.com/api/coaches").then(res => setCoaches(res.data));
   }, []);
 
   // -----------------------------
@@ -107,7 +107,7 @@ useEffect(() => {
         total_price: calculatePrice()
       };
 
-      const res = await axios.post("http://localhost:5000/api/bookings", payload);
+      const res = await axios.post("https://badminton-court-booking-system-hr06.onrender.com/api/bookings", payload);
       alert("Booking confirmed! ID: " + res.data.booking_id);
 
       // Reset selections after booking
