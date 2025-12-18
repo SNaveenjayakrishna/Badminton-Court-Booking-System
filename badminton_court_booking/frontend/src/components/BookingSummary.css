@@ -1,0 +1,36 @@
+.summary-card {
+  background-color: #f1f5f9;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+  margin-top: 1rem;
+}
+
+.summary-card p {
+  margin-bottom: 0.5rem;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.summary-card h4 {
+  margin-top: 0.8rem;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+}
+
+.helper-text {
+  font-size: clamp(0.75rem, 1.2vw, 0.85rem);
+  color: var(--text-light);
+  margin-top: 0.3rem;
+}
+
+.summary-card button:enabled {
+  background-color: #2563eb; 
+  color: white;
+  cursor: pointer;
+}
+
+
+.summary-card button:enabled:hover {
+  background-color: #1d4ed8; 
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}

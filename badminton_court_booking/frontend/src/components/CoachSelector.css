@@ -1,0 +1,14 @@
+.coach-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: clamp(0.8rem, 2vw, 1rem);
+  margin-bottom: 1rem;
+}
+
+.coach-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.4rem;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}

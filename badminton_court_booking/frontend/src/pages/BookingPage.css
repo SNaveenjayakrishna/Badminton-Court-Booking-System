@@ -1,0 +1,86 @@
+/* =========================
+   PAGE WRAPPER
+   ========================= */
+
+.page-container {
+  max-width: clamp(320px, 90vw, 1100px);
+  margin: auto;
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+/* =========================
+   SECTION CARDS
+   ========================= */
+
+.section-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+  margin-bottom: 1.5rem;
+}
+
+/* =========================
+   DATE INPUT
+   ========================= */
+
+.section-card input[type="date"] {
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  outline: none;
+}
+
+/* =========================
+   HEADINGS
+   ========================= */
+
+.page-container h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+
+.section-card h3 {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  margin-bottom: 0.8rem;
+}
+
+/* =========================
+   BUTTONS (OVERALL)
+   ========================= */
+
+.page-container button {
+  padding: 0.6rem 1.2rem;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--primary);
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+.page-container button:hover {
+  background-color: var(--primary-light);
+}
+
+.page-container button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* =========================
+   RESPONSIVE SPACING
+   ========================= */
+
+@media (max-width: 600px) {
+  .section-card {
+    padding: 1rem;
+  }
+
+  .page-container {
+    padding: 1rem;
+  }
+}
